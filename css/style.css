@@ -48,31 +48,55 @@
         grid-area: footer;
         background-color: rgb(255, 136, 127);
     }
-      /*aca vamos a hacer el grid del index productos*/
-      .conteiner2{
-        display: grid;
-        grid-template-columns:repeat(4, 25%) ;
-        grid-template-rows: 100px 600px 600px ;
-       grid-template-areas:
-       "nav nav nav nav "
-       "productos productos productos productos"
-        "footer footer footer footer" ;  
-    }
-      .nav{display: grid;
-        grid-area: nav;
-        background-color:white;
-       
-    }
-      .productos3{display: grid;
-        grid-area: productos;
-        background-color: white;
-        display: flex;
-        flex-wrap: wrap;
-        display: flex;
-    }
-    .productos2 h1{ 
-        text-align: center;
-    }
+
+
+/*aca empezamos con index2 el grid*/
+.conteiner3{
+    display: grid;
+    grid-template-columns:repeat(4, 25%);
+    grid-template-rows: 200px 500px 400px 400px ;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "productos productos productos productos"
+    "productos productos productos productos"
+    "footer footer footer footer ";
+}
+.nav{
+    display: grid;
+    grid-area: nav;
+}
+.productos1{
+
+    display: grid;
+    grid-area: productos;
+    grid-template-columns:repeat(4, 1fr) ;
+    grid-auto-rows: 350px;
+    padding: 20px;
+    grid-gap: 10px;
+}
+.productos1 img{
+    width: 100%;
+   
+    object-fit: cover;
+    max-height:300px;
+    border: 1px solid black;
+    
+}
+
+.produ--2 img{
+    display: grid;
+    grid-area: productos2;
+  
+    
+
+}
+
+
+.footer{
+    display: grid;
+    grid-area: footer;
+}
+
       /*aca empezamos a darle estilo con css*/
       /*menu*/
       nav{
@@ -136,7 +160,7 @@
         flex-direction: column;
         height: auto;
         max-height:300px;
-        border: 2231px solid rgb(61, 23, 8);
+       
     }
   .productos h1{
         text-align: center;
@@ -259,10 +283,10 @@
     }
        
     /*aca vamos a hacer el grid del index productos*/
-     .conteiner2{
+     .conteiner3{
         display: grid;
         grid-template-columns:repeat(2, 50%) ;
-        grid-template-rows: 100px 1500px 600px ;
+        grid-template-rows: 100px 600px 600px ;
        grid-template-areas:
        "nav nav"
        "productos productos"
@@ -273,20 +297,21 @@
         background-color:white;
        
     }
-      .productos2{display: grid;
+      .productos1{display: grid;
         display: flex;
        justify-content: center;
         grid-area: productos;
+         flex-direction: column;
+        text-align: center;
+        display: grid;
     }
-    .flex-productos img{
+    .productos1 img{
         display: flex;
         max-height: 400px;
-        text-align: center
+      
+     
     }
-    .productos2 h1{
-        text-align: center;
-        justify-content: center;
-    }
+  
     }
       /************aca comenzamos con modo celular********************************/
     @media screen and (max-width:680px){
@@ -374,14 +399,14 @@
         text-align: center;
     }
         /*aca vamos a hacer el grid del index productos*/
-     .conteiner2{
+     .conteiner3{
         display: grid;
         grid-template-columns:repeat(1, 100%) ;
-        grid-template-rows: 600px 1500px 600px ;
+        grid-template-rows: 600px 90% 600px ;
        grid-template-areas:
-       "nav nav"
-       "productos productos"
-       "footer footer " ;  
+       "nav "
+       "productos "
+       "footer  " ;  
     }
     
     .nav{display: grid;
@@ -390,12 +415,12 @@
        
     }
     
-    .productos2{display: grid;
+    .productos1{display: grid;
         display: flex;
        justify-content: center;
         grid-area: productos;
     }
-    .flex-productos img{
+    .productos1 img{
         display: flex;
         max-height: 400px;
         text-align: center
